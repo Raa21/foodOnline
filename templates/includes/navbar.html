@@ -8,7 +8,7 @@
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                         <div class="logo">
                             <figure>
-                                <a href="home.html" class="light-logo">
+                                <a href="{% url 'home' %}" class="light-logo">
                                     <img src="{% static 'logo/foodOnlineLogo.png' %}" alt="FoodBakery" width="250">
                                 </a>
                             </figure>
@@ -19,7 +19,7 @@
                                         <li>
                                             <a href="#">Demos</a>
                                             <ul>
-                                                <li><a href="home.html">Food Bakery</a></li>
+                                                <li><a href="{% url 'home' %}">Food Bakery</a></li>
                                                 <li><a href="mexican-restaurant.html">Mexican Restaurant</a></li>
                                                 <li><a href="foodstop.html">Food Stop</a></li>
                                                 <li><a href="rtl.html">Rtl Demo</a></li>
@@ -69,7 +69,8 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="login-option">
-                            <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="{% url 'registerUser' %}">Login / Register</a><a class="get-start-btn" href="{% url 'registerResturant' %}">
+                            <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href='#'>Login</a>
+                            <a class="cs-color cs-popup-joinus-btn login-popup" href="{% url 'registerUser' %}">/Register</a><a class="get-start-btn" href="{% url 'registerResturant' %}">
                                 Register
                                 Restaurant </a>
                         </div>
