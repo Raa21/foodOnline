@@ -74,6 +74,13 @@ class User(AbstractUser):
     def __str__(self):
         return self.email
     
+    def get_role(self):
+        if self.role == 1:
+            user_role = 'Resturant'
+        elif self.role == 2:
+            user_role = 'Customer'
+        return user_role
+    
     def has_perm(self, perm, obj=None):
         return self.is_admin
     
