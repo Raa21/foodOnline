@@ -1,10 +1,644 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
-<h4>Welcome {{user.username}}</h4>
-<p>{{user.get_role}}</p>
+<header id="header">
+    <div class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="logo">
+                        <figure>
+                            <a href="index.html" class="light-logo">
+                                <img src="{% static 'extra-images/main-logo.png'%}" alt="FoodBakery">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="main-nav">
+                        <nav id="site-navigation" class="main-navigation">
+                            <ul>
+                                <li>
+                                    <a href="#">Demos</a>
+                                    <ul>
+                                        <li><a href="index.html">Food Bakery</a></li>
+                                        <li><a href="mexican-restaurant.html">Mexican Restaurant</a></li>
+                                        <li><a href="foodstop.html">Food Stop</a></li>
+                                        <li><a href="rtl.html">Rtl Demo</a></li>
+                                        <li><a href="food-cout.html">Food Court</a></li>
+                                        <li><a href="single-restaurant.html">Single Restaurant Demo</a></li>
+                                    </ul>
+                                    <!--End Sub Menu -->
+                                </li>
+                                <li><a href="listings.html">Restaurants</a></li>
+                                <li>
+                                    <a href="#">Pages</a>
+                                    <ul>
+                                        <li><a href="price-plans.html">Price Plans</a></li>
+                                        <li><a href="how-it-works.html">How it works</a></li>
+                                        <li><a href="faq.html">FAQ’s</a></li>
+                                        <li><a href="404.html">404</a></li>
+                                        <li><a href="search-result.html">Search Result</a></li>
+                                        <li><a href="contact-us.html">Contact</a></li>
+                                    </ul>
+                                    <!--End Sub Menu -->
+                                </li>
+                                <li>
+                                    <a href="#">Blogs</a>
+                                    <ul>
+                                        <li><a href="blog-large.html">Blog Large</a></li>
+                                        <li><a href="blog-medium.html">Blog Medium</a></li>
+                                        <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                                        <li><a href="blog-detail.html">Blog Detail Page</a></li>
+                                    </ul>
+                                    <!--End Sub Menu -->
+                                </li>
+                            </ul>
+                        </nav><!-- .main-navigation -->
+                    </div>
+                    <div class="main-location">
+                        <ul>
+                            <li class="location-has-children">
+                                <a href="#"><i class="icon-compass-with-white-needles"></i>Feel Like Eating</a>
+                                <ul>
 
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-05-1.png' %}">Apple
+                                            Juice</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-19-1.png' %}">BB.Q</a><span></span>
+                                    </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-22-1.png' %}">Beef
+                                            Roast</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-10-1.png' %}">Carrot
+                                            Juice</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-03-1.png' %}">Cheese
+                                            Burger</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-07-1.png' %}">Chicken
+                                            Roast</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-01-1.png' %}">Chines
+                                            Soup</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-18-1.png' %}">Cold
+                                            Coffee</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-23-1.png' %}">Cold
+                                            Drink</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-28-1.png' %}">Cupcake</a><span></span>
+                                    </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-21-1.png' %}">Doughnut</a><span></span>
+                                    </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-25-1.png' %}">Drum
+                                            Stick</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-11-1.png' %}">Egg
+                                            Fry</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-12-1.png' %}">Fish
+                                            Fry</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-13-1.png' %}">Fresh
+                                            Juice</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-30-1.png' %}">Hot
+                                            Dogs</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-26-1.png' %}">Ice
+                                            Cream</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-15-1.png' %}">Magi</a>
+                                        <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-09-1.png' %}">Noodles</a>
+                                        <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-14-1.png' %}">Pastry</a><span></span>
+                                    </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-29-1.png' %}">Pizza</a><span></span>
+                                    </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-06-1.png' %}">Potato
+                                            Fries</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-24-1.png' %}">Prawns</a>
+                                        <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-17-1.png' %}">Sham
+                                            pane</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-27-1.png' %}">Shawarma</a><span></span>
+                                    </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-04-1.png' %}">Soda
+                                            water</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-16-1.png' %}">Stakes</a>
+                                        <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-22-1.png' %}">Steam
+                                            Roast</a> <span></span> </li>
+                                    <li><a href="listings.html"><img alt="" src="{% static 'extra-images/food-icon-02-1.png' %}">Tea</a><span></span>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="location-has-children choose-location">
+                                <a href="#"><i class="icon-location-pin2"></i>Choose location</a>
+                                <ul>
+                                    <li class="select-location">
+                                        <div class="foodbakery-locations-fields-group">
+                                            <form action="#"><span id="foodbakery_radius_location_open" class="foodbakery-radius-location"><i class="icon-target5"></i></span>
+                                                <span class="foodbakery-input-cross foodbakery-input-cross-header" style="display:none;">
+                                                    <i class="icon-cross"></i></span>
+                                                <input type="text" value="" name="location" placeholder="All Locations" autocomplete="off">
+
+                                                <span><span class="loc-icon-holder"><i class="icon-target3"></i></span></span>
+                                                <div class="select-location" id="foodbakery-radius-range622192" style="display: none;">
+                                                    <div class="select-popup popup-open">
+                                                        <a id="location_close_popup622192" href="javascript:0;" class="location-close-popup">
+                                                            <i class="icon-times"></i></a>
+                                                        <input type="hidden" class="foodbakery-radius" name="foodbakery_radius" value="10">
+                                                        <p>Show with in</p>
+                                                        <input id="ex16b313324" type="text" data-value="10" value="10" style="display: none;">
+                                                        <script>
+                                                            jQuery(document).ready(function () {
+                                                                var elem = jQuery("#ex16b313324");
+                                                                if (elem.length != "") {
+                                                                    elem.slider({
+                                                                        step: 1,
+                                                                        min: 0,
+                                                                        max: 500,
+                                                                        value: 10,
+                                                                    });
+                                                                    elem.on("slideStop", function () {
+                                                                        var rang_slider_val = elem.val();
+                                                                        jQuery("#ex16b313324CurrentSliderValLabel").html(rang_slider_val);
+                                                                        jQuery("#range-hidden-foodbakery-radius622192").val(rang_slider_val);
+                                                                        //foodbakery_restaurant_content("622192");
+                                                                    });
+                                                                    elem.on("slide", function () {
+                                                                        jQuery("#ex16b313324CurrentSliderValLabel").html(elem.val());
+                                                                    });
+                                                                }
+
+                                                                $("#foodbakery_radius_location_open").click(function () {
+                                                                    $("#foodbakery-radius-range622192").show();
+                                                                });
+                                                                $("#location_close_popup622192").click(function () {
+                                                                    $("#foodbakery-radius-range622192").hide();
+                                                                });
+                                                            });
+                                                        </script>
+                                                        <span>Miles: <span id="ex16b313324CurrentSliderValLabel">10</span></span><br>
+                                                        <p class="my-location">of <i class="cs-color icon-location-arrow"></i><a id="foodbakery-geo-location-all" class="cs-color foodbakery-geo-location313324" href="javascript:void(0)">My location</a></p>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </li>
+                                    <li class="popular-location">Popular Locations</li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="#">Acle</a></li>
+                                            <li><a href="#">Cheshire</a></li>
+                                            <li><a href="#">Crewe</a></li>
+                                            <li><a href="#">Devon</a></li>
+                                            <li><a href="#">England</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="login-option">
+                        <div class="user-dashboard-menu">
+                            <ul>
+                                <li class="user-dashboard-menu-children">
+                                    <a href="javascript:void(0);" class="">
+                                        <figure class="profile-image">
+                                            <img src="{% static 'extra-images/team-medium-img1.jpg' %}" alt="">
+                                        </figure>
+                                        {{user.first_name}}
+                                    </a>
+                                    {% include 'includes/c_sidebar.html' %}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+<!-- Main Section Start -->
+<div class="main-section">
+    <div class="page-section restaurant-detail-image-section" style=" background: url({% static 'extra-images/banner-img-2.jpg' %}) no-repeat scroll 0 0 / cover;">
+        <!-- Container Start -->
+        <div class="container">
+            <!-- Row Start -->
+            <div class="row">
+                <!-- Column Start -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="company-info-detail">
+                        <div class="company-info">
+                            <div class="img-holder">
+                                <figure>
+                                    <img src="{% static 'extra-images/team-medium-img1.jpg' %}" alt="">
+                                </figure>
+                            </div>
+                            <div class="text-holder">
+                                <span class="restaurant-title">{{user.first_name}}</span>
+                                <ul class="user-info-contact">
+                                    <li class="cell"><i class="icon-phone"></i><a href="tel:0123456789">{{user.phone_number}}</a></li>
+                                    <li class="email"><i class="icon-mail5"></i><a href="mailto:{{user.email}}">{{user.email}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column End -->
+            </div>
+            <!-- Row End -->
+        </div>
+        <!-- Container End -->
+    </div>
+    <div class="page-section account-header buyer-logged-in">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="user-account-nav user-account-sidebar">
+                        <div class="user-nav-list">
+                            {% include 'includes/c_sidebar.html' %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="user-dashboard">
+                        <div class="user-holder">
+                            <div id="close-me" class="user-message" style="background-color:#1e73be;">
+                                <a class="close close-div" href="#"><i class="icon-cross-out"></i></a>
+                                <h2>Welcome to your account</h2>
+                                <p>My Account gives you quick access to settings and tools for managing your Account like [Change address] and [Change password] . You can [manage Orders] Booking, and access even more [Shortlists] and [Statements] and may more.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="user-suggest-list listing simple">
+                                        <div class="element-title">
+                                            <h5>Suggested Restaurants</h5>
+                                            <span>Define <em data-target="#suggestions-box" data-toggle="modal">Search criteria</em> to search for specific</span>
+                                        </div>
+                                        <ul class="user-suggest-list-holder">
+                                            <li>
+                                                <div class="suggest-list-holder">
+                                                    <div class="img-holder">
+                                                        <figure>
+                                                            <a href="listings.html"><img src="{% static 'extra-images/fb-restaurant-06.jpg' %}" alt=""> </a>
+                                                        </figure>
+                                                    </div>
+                                                    <div class="text-holder">
+                                                        <div class="post-title">
+                                                            <h5><a href="listings.html">Dragon Express</a></h5>
+                                                        </div>
+                                                        <span class="post-categories"> Apple Juice , Carrot Juice , Ice Cream </span>
+                                                        <div class="list-option">
+                                                            <a href="#" class="shortlist-btn shortlisted"><i class="icon-heart4"></i></a>
+                                                            <a href="listings.html" class="viewmenu-btn">View Menu</a>
+                                                        </div>
+                                                        <div class="delivery-potions">
+                                                            <div class="post-time">
+                                                                <i class="icon-motorcycle"></i>
+                                                                <div class="time-tooltip">
+                                                                    <div class="time-tooltip-holder"><b class="tooltip-label">Delivery time</b><b class="tooltip-info">10</b> </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post-time">
+                                                                <i class="icon-clock4"></i>
+                                                                <div class="time-tooltip">
+                                                                    <div class="time-tooltip-holder"> <b class="tooltip-label">Pickup time</b> <b class="tooltip-info">15</b> </div>
+                                                                </div>
+                                                            </div>
+                                                            <span>10-11 Bethel Square, Brecon LD3 7JP, UK</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="suggest-list-holder">
+                                                    <div class="img-holder">
+                                                        <figure>
+                                                            <a href="listings.html"><img src="{% static 'extra-images/listing-logo18.png' %}" alt=""> </a>
+                                                        </figure>
+                                                    </div>
+                                                    <div class="text-holder">
+                                                        <div class="post-title">
+                                                            <h5><a href="listings.html">Restaurant Demo </a></h5>
+                                                        </div>
+                                                        <span class="post-categories"> Type of food : Apple Juice</span>
+                                                        <div class="list-option">
+                                                            <a href="#" class="shortlist-btn shortlist-btn"><i class="icon-heart-o"></i> </a>
+                                                            <a href="listings.html" class="viewmenu-btn">View Menu</a>
+                                                        </div>
+                                                        <div class="delivery-potions">
+                                                            <div class="post-time">
+                                                                <i class="icon-motorcycle"></i>
+                                                                <div class="time-tooltip">
+                                                                    <div class="time-tooltip-holder"><b class="tooltip-label">Delivery time</b><b class="tooltip-info">10</b> </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post-time">
+                                                                <i class="icon-clock4"></i>
+                                                                <div class="time-tooltip">
+                                                                    <div class="time-tooltip-holder"> <b class="tooltip-label">Pickup time</b> <b class="tooltip-info">15</b> </div>
+                                                                </div>
+                                                            </div>
+                                                            <span>Totnes, Devon</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img-holder">
+                                                    <figure>
+                                                        <a href="#"> <img src="{% static 'extra-images/fb-restaurant-01.jpg' %}" class="img-list wp-post-image" alt=""> </a>
+                                                    </figure>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="post-title">
+                                                        <h5>
+                                                            <a href="listing-detail.html">Jet’s Kitchen</a>
+                                                        </h5>
+                                                    </div>
+                                                    <span class="post-categories"><span>Type of food :
+                                                        </span> Chines
+                                                        Soup, Egg Fry, Fish Fry</span>
+                                                    <div class="delivery-potions">
+                                                        <div class="post-time">
+                                                            <i class="icon-motorcycle"></i>
+                                                            <div class="time-tooltip">
+                                                                <div class="time-tooltip-holder"> <b class="tooltip-label">Delivery
+                                                                        time</b> <b class="tooltip-info">Your order will
+                                                                        be
+                                                                        delivered in 10 minutes.</b> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-time">
+                                                            <i class="icon-clock4"></i>
+                                                            <div class="time-tooltip">
+                                                                <div class="time-tooltip-holder"> <b class="tooltip-label">Pickup
+                                                                        time</b> <b class="tooltip-info">You
+                                                                        can pickup order in
+                                                                        15 minutes.</b> </div>
+                                                            </div>
+                                                        </div>
+                                                        <span>Montrose, Angus</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-option">
+                                                    <a href="javascript:void(0);" class="shortlist-btn" data-toggle="modal" data-target="#sign-in"><i class="icon-heart-o"></i> </a>
+                                                    <a href="#" class="viewmenu-btn text-color">View Menu</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img-holder">
+                                                    <figure>
+                                                        <a href="#"><img src="{% static 'extra-images/fb-restaurant-04.jpg' %}" class="img-list wp-post-image" alt=""> </a>
+                                                    </figure>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="post-title">
+                                                        <h5>
+                                                            <a href="listing-detail.html">Golden Chick Fries</a>
+                                                            <span class="sponsored text-color">Sponsored</span>
+                                                        </h5>
+                                                    </div>
+                                                    <span class="post-categories"><span>Type of food :
+                                                        </span>
+                                                        Doughnut, Hot Dogs, Ice Cream</span>
+                                                    <div class="delivery-potions">
+                                                        <div class="post-time">
+                                                            <i class="icon-motorcycle"></i>
+                                                            <div class="time-tooltip">
+                                                                <div class="time-tooltip-holder"> <b class="tooltip-label">Delivery
+                                                                        time</b>
+                                                                    <b class="tooltip-info">Your order will
+                                                                        be
+                                                                        delivered in 10 minutes.</b>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-time">
+                                                            <i class="icon-clock4"></i>
+                                                            <div class="time-tooltip">
+                                                                <div class="time-tooltip-holder"> <b class="tooltip-label">Pickup
+                                                                        time</b>
+                                                                    <b class="tooltip-info">You can pickup
+                                                                        order in
+                                                                        15 minutes.</b>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <span>Leyton, Greater London</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-option">
+                                                    <a href="javascript:void(0);" class="shortlist-btn" data-toggle="modal" data-target="#sign-in">
+                                                        <i class="icon-heart-o"></i> </a>
+                                                    <a href="#" class="viewmenu-btn text-color">View Menu</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img-holder">
+                                                    <figure>
+                                                        <a href="#"><img src="{% static 'extra-images/xlisting-logo03.png.pagespeed.ic_.aT-o9LinEJ.png' %}" class="img-list wp-post-image" alt=""> </a>
+                                                    </figure>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="post-title">
+                                                        <h5>
+                                                            <a href="listing-detail.html">Nature Healthy Food</a>
+                                                        </h5>
+                                                    </div>
+                                                    <span class="post-categories"><span>Type of food :
+                                                        </span> Apple
+                                                        Juice, Chicken Roast, Chines Soup, Magi</span>
+                                                    <div class="delivery-potions">
+                                                        <div class="post-time">
+                                                            <i class="icon-motorcycle"></i>
+                                                            <div class="time-tooltip">
+                                                                <div class="time-tooltip-holder"> <b class="tooltip-label">Delivery
+                                                                        time</b> <b class="tooltip-info">Your order will
+                                                                        be
+                                                                        delivered in 10 minutes.</b> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-time">
+                                                            <i class="icon-clock4"></i>
+                                                            <div class="time-tooltip">
+                                                                <div class="time-tooltip-holder"> <b class="tooltip-label">Pickup
+                                                                        time</b> <b class="tooltip-info">You
+                                                                        can pickup order in
+                                                                        15 minutes.</b> </div>
+                                                            </div>
+                                                        </div>
+                                                        <span>Bristol, Bristol</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-option">
+                                                    <a href="javascript:void(0);" class="shortlist-btn" data-toggle="modal" data-target="#sign-in"><i class="icon-heart-o"></i> </a>
+                                                    <a href="#" class="viewmenu-btn text-color">View Menu</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img-holder">
+                                                    <figure>
+                                                        <a href="#"><img src="{% static 'extra-images/fb-restaurant-09.png' %}" class="img-list wp-post-image" alt=""> </a>
+                                                    </figure>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="post-title">
+                                                        <h5>
+                                                            <a href="listing-detail.html">Burger King</a>
+                                                        </h5>
+                                                    </div>
+                                                    <span class="post-categories"><span>Type of food :
+                                                        </span> Beef
+                                                        Roast, Doughnut, Prawns</span>
+                                                    <div class="delivery-potions">
+                                                        <div class="post-time">
+                                                            <i class="icon-motorcycle"></i>
+                                                            <div class="time-tooltip">
+                                                                <div class="time-tooltip-holder"> <b class="tooltip-label">Delivery
+                                                                        time</b> <b class="tooltip-info">Your order will
+                                                                        be
+                                                                        delivered in 10 minutes.</b> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-time">
+                                                            <i class="icon-clock4"></i>
+                                                            <div class="time-tooltip">
+                                                                <div class="time-tooltip-holder"> <b class="tooltip-label">Pickup
+                                                                        time</b> <b class="tooltip-info">You
+                                                                        can pickup order in
+                                                                        15 minutes.</b> </div>
+                                                            </div>
+                                                        </div>
+                                                        <span>Bridport, Dorset</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-option">
+                                                    <a href="javascript:void(0);" class="shortlist-btn" data-toggle="modal" data-target="#sign-in">
+                                                        <i class="icon-heart-o"></i> </a>
+                                                    <a href="#" class="viewmenu-btn text-color">View Menu</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="pagination">
+                                        <li class="active"><a>1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><span class="page-numbers dots">…</span></li>
+                                        <li><a href="#">24</a></li>
+                                        <li><a href="#">Next </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="suggestions-box" tabindex="-1" role="dialog" style="display: none;">
+                                <div class="modal-dialog" role="document">
+                                    <div class="login-form">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                                <h3 class="modal-title">Suggested Restaurants Settings</h3>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="status status-message"></div>
+                                                <form method="post" class="wp-user-form webkit" id="ControlForm_suggestions">
+                                                    <div class="input-filed">
+                                                        <ul class="form-elements" id="wrapper_suggested_restaurants_categories">
+                                                            <li class="to-label"><label>Categories for suggestions</label></li>
+                                                            <li class="to-field multiple"><select required="required" class="multiple" multiple="multiple" id="foodbakery_suggested_restaurants_categories" name="foodbakery_suggested_restaurants_categories[]" style="height: 110px !important; display: none;" data-placeholder="Please Select">
+                                                                    <option value="all_categories">All Categories</option>
+                                                                    <option value="apple-juice">Apple Juice</option>
+                                                                    <option selected="selected" value="bb-q">BB.Q</option>
+                                                                    <option value="beef-roast">Beef Roast</option>
+                                                                    <option selected="selected" value="carrot-juice">Carrot Juice</option>
+                                                                    <option value="cheese-burger">Cheese Burger</option>
+                                                                    <option value="chicken-roast">Chicken Roast</option>
+                                                                    <option value="chines-soup">Chines Soup</option>
+                                                                    <option value="cold-coffee">Cold Coffee</option>
+                                                                    <option value="cold-drink">Cold Drink</option>
+                                                                    <option value="cupcake">Cupcake</option>
+                                                                    <option value="doughnut">Doughnut</option>
+                                                                    <option value="drum-stick">Drum Stick</option>
+                                                                    <option value="egg-fry">Egg Fry</option>
+                                                                    <option value="fish-fry">Fish Fry</option>
+                                                                    <option value="fresh-juice">Fresh Juice</option>
+                                                                    <option value="hot-dogs">Hot Dogs</option>
+                                                                    <option value="ice-cream">Ice Cream</option>
+                                                                    <option value="magi">Magi</option>
+                                                                    <option value="noodles">Noodles</option>
+                                                                    <option value="pastry">Pastry</option>
+                                                                    <option value="pizza">Pizza</option>
+                                                                    <option value="potato-fries">Potato Fries</option>
+                                                                    <option value="prawns">Prawns</option>
+                                                                    <option value="sham-pane">Sham pane</option>
+                                                                    <option value="shawarma">Shawarma</option>
+                                                                    <option value="soda-water">Soda water</option>
+                                                                    <option value="stakes">Stakes</option>
+                                                                    <option value="steam-roast">Steam Roast</option>
+                                                                    <option value="tea">Tea</option>
+                                                                </select>
+                                                                <div class="chosen-container chosen-container-multi" style="width: 0px;" title="" id="foodbakery_suggested_restaurants_categories_chosen">
+                                                                    <ul class="chosen-choices">
+                                                                        <li class="search-choice"><span>BB.Q</span><a class="search-choice-close" data-option-array-index="2"></a></li>
+                                                                        <li class="search-choice"><span>Carrot Juice</span><a class="search-choice-close" data-option-array-index="4"></a></li>
+                                                                        <li class="search-field"><input type="text" value="Please Select" class="" autocomplete="off" style="width: 25px;"></li>
+                                                                    </ul>
+                                                                    <div class="chosen-drop">
+                                                                        <ul class="chosen-results">
+                                                                            <li class="active-result" data-option-array-index="0">All Categories</li>
+                                                                            <li class="active-result" data-option-array-index="1">Apple Juice</li>
+                                                                            <li class="result-selected" data-option-array-index="2">BB.Q</li>
+                                                                            <li class="active-result" data-option-array-index="3">Beef Roast</li>
+                                                                            <li class="result-selected" data-option-array-index="4">Carrot Juice</li>
+                                                                            <li class="active-result" data-option-array-index="5">Cheese Burger</li>
+                                                                            <li class="active-result" data-option-array-index="6">Chicken Roast</li>
+                                                                            <li class="active-result" data-option-array-index="7">Chines Soup</li>
+                                                                            <li class="active-result" data-option-array-index="8">Cold Coffee</li>
+                                                                            <li class="active-result" data-option-array-index="9">Cold Drink</li>
+                                                                            <li class="active-result" data-option-array-index="10">Cupcake</li>
+                                                                            <li class="active-result" data-option-array-index="11">Doughnut</li>
+                                                                            <li class="active-result" data-option-array-index="12">Drum Stick</li>
+                                                                            <li class="active-result" data-option-array-index="13">Egg Fry</li>
+                                                                            <li class="active-result" data-option-array-index="14">Fish Fry</li>
+                                                                            <li class="active-result" data-option-array-index="15">Fresh Juice</li>
+                                                                            <li class="active-result" data-option-array-index="16">Hot Dogs</li>
+                                                                            <li class="active-result" data-option-array-index="17">Ice Cream</li>
+                                                                            <li class="active-result" data-option-array-index="18">Magi</li>
+                                                                            <li class="active-result" data-option-array-index="19">Noodles</li>
+                                                                            <li class="active-result" data-option-array-index="20">Pastry</li>
+                                                                            <li class="active-result" data-option-array-index="21">Pizza</li>
+                                                                            <li class="active-result" data-option-array-index="22">Potato Fries</li>
+                                                                            <li class="active-result" data-option-array-index="23">Prawns</li>
+                                                                            <li class="active-result" data-option-array-index="24">Sham pane</li>
+                                                                            <li class="active-result" data-option-array-index="25">Shawarma</li>
+                                                                            <li class="active-result" data-option-array-index="26">Soda water</li>
+                                                                            <li class="active-result" data-option-array-index="27">Stakes</li>
+                                                                            <li class="active-result" data-option-array-index="28">Steam Roast</li>
+                                                                            <li class="active-result" data-option-array-index="29">Tea</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="input-filed">
+                                                        <label>Number of suggestions to show</label>
+                                                        <input type="text" tabindex="11" placeholder="example 20" class="form-control" id="suggested_restaurants_max_restaurants" name="suggested_restaurants_max_restaurants" value="7"> </div>
+                                                    <div class="input-filed">
+                                                        <div class="save-search-criteria input-button-loader">
+                                                            <input type="button" class="btn-suggestions-settings cs-bgcolor" name="submit-suggestions-settings" value="Save Settings">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% include 'includes/alerts.html' %}
 
 {% endblock %}
